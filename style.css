@@ -1,0 +1,119 @@
+/* font-family: 'Palanquin', sans-serif;
+   font-family: 'Staatliches', cursive; */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #EFF1FF;
+}
+
+.page {
+    width: 384px;
+}
+
+.header {
+    width: 100vw;
+    background-color: #8E9AAF;
+    display: flex;
+    flex-direction: column;
+}
+
+.header>img {
+    margin: 32px auto 32px;
+    width: 137px;
+}
+
+.header>h1 {
+    width: 100vw;
+    margin-bottom: 29px;
+
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+
+    background-color: #CBC0D3;
+    color: #fff;
+}
+
+main {
+    margin: 14px auto 63px;
+    width: 320px;
+
+}
+
+main>p {
+    color: #23053A;
+    text-align: center;
+    line-height: 20px;
+    /* Seguindo os 15px que foi proposto no desafio, a line-height não ficou visualmente bom. */
+    font-size: 20px;
+    font-family: 'Palanquin', sans-serif;
+    width: 305px;
+}
+
+.card {
+    background-color: blue;
+    margin-top: 63px;
+    position: relative;
+    animation: botup 700ms;
+}
+
+.card+.card {
+    margin-top: 36px;
+}
+
+.cardA {
+    width: 320px;
+    height: 250px;
+}
+
+.cardB {
+    width: 320px;
+    height: 450px;
+}
+
+.card>p {
+    width: 112px;
+    background-color: #FEEAFA;
+
+    line-height: 34px;
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+    text-align: center;
+
+    border-radius: 20px;
+
+    position: absolute;
+    right: 16px;
+    animation: topdown 1s;
+}
+
+
+@keyframes botup {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes topdown {
+    from {
+        opacity: 0;
+        transform: translateY(-90px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
